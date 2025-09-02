@@ -8,6 +8,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
+import { projects } from "../constants";
 
 
 

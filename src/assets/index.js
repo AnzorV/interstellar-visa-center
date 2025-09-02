@@ -47,6 +47,9 @@ import venus from './venus.png';
 import milkyway from './milky-way.png';
 import earth from './earth.png';
 import pluto from './pluto.png';
+import visaportal from './visaportal.png';
+import interviewsystem from './interviewsystem.png';
+import guidelines from './guidelines.png';
 export {
   logo,
   backend,
@@ -93,5 +96,8 @@ export {
   venus,
   milkyway,
   earth,
-  pluto
+  pluto,
+  visaportal,
+  interviewsystem,
+  guidelines
 };
