@@ -1,0 +1,133 @@
+// Works.jsx
+import React from "react";
+import Tilt from "react-tilt";
+import { motion } from "framer-motion";
+
+import { styles } from "../styles";
+import { github } from "../assets";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
+
+// Import your Interstellar Visa images
+import visaPortal from "../assets/visaPortal.png";
+import interviewSystem from "../assets/interviewSystem.png";
+import guidelines from "../assets/guidelines.png";
+
+const projects = [
+  {
+    name: "Visa Application Portal",
+    description:
+      "Submit your interstellar visa applications, upload documents, and track application status online.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: visaPortal,
+    source_code_link: "https://github.com/your-repo/visa-portal",
+  },
+  {
+    name: "Interview Scheduling System",
+    description:
+      "Schedule visa interviews with notifications, optimizing processing times and convenience.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "scss", color: "pink-text-gradient" },
+    ],
+    image: interviewSystem,
+    source_code_link: "https://github.com/your-repo/interview-system",
+  },
+  {
+    name: "Visa Guidelines & Resources",
+    description:
+      "Comprehensive resources providing interstellar visa requirements, guidelines, and FAQs.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "supabase", color: "green-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+    ],
+    image: guidelines,
+    source_code_link: "https://github.com/your-repo/visa-guidelines",
+  },
+];
+
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+  return (
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      <Tilt
+        options={{ max: 45, scale: 1, speed: 450 }}
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+      >
+        <div className='relative w-full h-[230px]'>
+          <img
+            src={image}
+            alt={name}
+            className='w-full h-full object-cover rounded-2xl'
+          />
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img src={github} alt='source code' className='w-1/2 h-1/2 object-contain' />
+            </div>
+          </div>
+        </div>
+
+        <div className='mt-5'>
+          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        </div>
+
+        <div className='mt-4 flex flex-wrap gap-2'>
+          {tags.map(tag => (
+            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
+        </div>
+      </Tilt>
+    </motion.div>
+  );
+};
+
+const Works = () => {
+  return (
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText}`}>Interstellar Visa Center</p>
+        <h2 className={`${styles.sectionHeadText}`}>Our Services</h2>
+      </motion.div>
+
+      <div className='w-full flex'>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        >
+          Explore the services of our Interstellar Visa Center. Each service is
+          designed to simplify the application process, guide you through
+          interstellar visa requirements, and ensure a smooth experience.
+        </motion.p>
+      </div>
+
+      <div className='mt-20 flex flex-wrap gap-7'>
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
+<div className="flex justify-center items-center mt-10">
+        <button
+      className="px-6 py-3 rounded-xl text-white font-semibold  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+            hover:scale-105 transition-transform duration-300"
+      onClick={() => window.location.href = "https://ecommerce-sanity-stripe-theta-eight.vercel.app/"}
+    >
+      Apply for a Visa 
+    </button>
+      </div>
+
+    </>
+  );
+};
+
+export default SectionWrapper(Works, "");
