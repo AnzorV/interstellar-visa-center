@@ -9,8 +9,8 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 // Import your Interstellar Visa images
-import visaPortal from "../assets/visaPortal.png";
-import interviewSystem from "../assets/interviewSystem.png";
+import visaPortal from "../assets/visaportal.png";
+import interviewSystem from "../assets/interviewsystem.png";
 import guidelines from "../assets/guidelines.png";
 
 const projects = [
