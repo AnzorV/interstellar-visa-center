@@ -223,9 +223,9 @@ const projects = [
     description:
       "Submit your interstellar visa applications, upload documents, and track application status online.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "mongodb", color: "green-text-gradient" },
-      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "visa", color: "blue-text-gradient" },
+      { name: "interstellar", color: "green-text-gradient" },
+      { name: "passport", color: "pink-text-gradient" },
     ],
     image: visaportal,
     source_code_link: "https://github.com/your-repo/visa-portal",
@@ -235,9 +235,9 @@ const projects = [
     description:
       "Schedule visa interviews with notifications, optimizing processing times and convenience.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "nodejs", color: "green-text-gradient" },
-      { name: "scss", color: "pink-text-gradient" },
+      { name: "interview", color: "blue-text-gradient" },
+      { name: "interstellar", color: "green-text-gradient" },
+      { name: "approve", color: "pink-text-gradient" },
     ],
     image: interviewsystem,
     source_code_link: "https://github.com/your-repo/interview-system",
@@ -247,9 +247,9 @@ const projects = [
     description:
       "Comprehensive resources providing interstellar visa requirements, guidelines, and FAQs.",
     tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "supabase", color: "green-text-gradient" },
-      { name: "css", color: "pink-text-gradient" },
+      { name: "certificate", color: "blue-text-gradient" },
+      { name: "interstellar", color: "green-text-gradient" },
+      { name: "visa", color: "pink-text-gradient" },
     ],
     image: guidelines,
     source_code_link: "https://github.com/your-repo/visa-guidelines",
