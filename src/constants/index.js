@@ -42,6 +42,9 @@ import {
   milkyway,
   earth,
   pluto,
+  guidelines,
+  interviewsystem,
+  visaportal,
 } from "../assets";
 
 export const navLinks = [
@@ -214,6 +217,44 @@ const testimonials = [
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
 ];
+const projects = [
+  {
+    name: "Visa Application Portal",
+    description:
+      "Submit your interstellar visa applications, upload documents, and track application status online.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: visaportal,
+    source_code_link: "https://github.com/your-repo/visa-portal",
+  },
+  {
+    name: "Interview Scheduling System",
+    description:
+      "Schedule visa interviews with notifications, optimizing processing times and convenience.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "scss", color: "pink-text-gradient" },
+    ],
+    image: interviewsystem,
+    source_code_link: "https://github.com/your-repo/interview-system",
+  },
+  {
+    name: "Visa Guidelines & Resources",
+    description:
+      "Comprehensive resources providing interstellar visa requirements, guidelines, and FAQs.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "supabase", color: "green-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+    ],
+    image: guidelines,
+    source_code_link: "https://github.com/your-repo/visa-guidelines",
+  },
+];
 
 
-export { services, technologies, experiences, testimonials };
+export { services, technologies, experiences, testimonials, projects };
